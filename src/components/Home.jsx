@@ -7,7 +7,9 @@ export default function Home() {
       <div className="bg-mobileHomeBgImage bg-cover w-full h-60 bg-center">
         <HomeButtons />
       </div>
-      <PersonalInfo />
+      <div>
+        <PersonalInfo />
+      </div>
     </div>
   );
 }
