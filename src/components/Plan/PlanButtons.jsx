@@ -1,18 +1,10 @@
-import { useContext } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { AppContext } from "../../App";
 
-export default function HomeButtons() {
+export default function PlanButtons() {
   const history = useHistory();
-  const { nameInput, emailInput, phoneInput, setError } =
-    useContext(AppContext);
 
-  function toPlan() {
-    if (nameInput === "" || emailInput === "" || phoneInput === "") {
-      setError("This field cannot be empty");
-    } else {
-      history.push("/plan");
-    }
+  function toHome() {
+    history.push("/");
   }
 
   return (
@@ -21,13 +13,13 @@ export default function HomeButtons() {
         style={{ fontSize: "16px" }}
         className="flex flex-row justify-center items-center gap-4 pt-12"
       >
-        <div className="cursor-pointer border border-transparent p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full bg-teal-100">
-          1
-        </div>
         <div
-          onClick={toPlan}
+          onClick={toHome}
           className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white"
         >
+          1
+        </div>
+        <div className="cursor-pointer border border-transparent p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full bg-teal-100">
           2
         </div>
         <div className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white">

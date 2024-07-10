@@ -1,13 +1,65 @@
 import "./App.css";
 import Home from "./components/Home";
+import Plan from "./components/Plan";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory,
+} from "react-router-dom/cjs/react-router-dom.min";
+import { createContext, useState } from "react";
+
+export const AppContext = createContext();
 
 function App() {
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [phoneInput, setPhoneInput] = useState("");
+  const [error, setError] = useState("");
+  const [planType, setPlanType] = useState("");
+  const [planPayment, setPlanPayment] = useState("");
+
+  //plan details.
+  // const planDetails = [{
+  //   id: 1,
+  //   planType: "Arcade",
+  //   planPayment: "$90"
+  // }]
+
   return (
-    <>
-      <div className="bg-gray-100 h-screen">
-        <Home />
-      </div>
-    </>
+    <div>
+      <AppContext.Provider
+        value={{
+          nameInput,
+          setNameInput,
+          emailInput,
+          setEmailInput,
+          phoneInput,
+          setPhoneInput,
+          error,
+          setError,
+          setPlanType,
+          planType,
+          setPlanPayment,
+          planPayment,
+        }}
+      >
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <div className="bg-gray-100 h-[700px]">
+                <Home />
+              </div>
+            </Route>
+            <Route path="/plan">
+              <div className="bg-gray-100 h-[800px]">
+                <Plan />
+              </div>
+            </Route>
+          </Switch>
+        </Router>
+      </AppContext.Provider>
+    </div>
   );
 }
 
