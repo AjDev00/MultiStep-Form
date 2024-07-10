@@ -1,4 +1,4 @@
-import NextStepBtn from "../NextStepBtn";
+import NextStepBtn from "./HomeNextStepBtn";
 import { AppContext } from "../../App";
 import { useContext } from "react";
 
@@ -41,7 +41,7 @@ export default function PersonalInfo() {
           {/* //email input. */}
           <span>Email Address</span>
           <input
-            type="text"
+            type="email"
             placeholder="e.g. stephenking@gmail.com"
             className="border border-slate-300 p-2 rounded-sm mb-5 focus:outline-blue-950"
             onChange={(e) => setEmailInput(e.target.value)}
@@ -61,7 +61,7 @@ export default function PersonalInfo() {
           <span className="text-red-500">{error ? error : ""}</span>
         </div>
       </div>
-      <div className="py-2">
+      <div className="py-0">
         <NextStepBtn />
       </div>
     </div>

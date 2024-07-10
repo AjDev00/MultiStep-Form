@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { AppContext } from "../App";
+import { AppContext } from "../../App";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 

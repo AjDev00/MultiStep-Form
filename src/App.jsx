@@ -8,6 +8,7 @@ import {
   useHistory,
 } from "react-router-dom/cjs/react-router-dom.min";
 import { createContext, useState } from "react";
+import AddOns from "./components/AddOns";
 
 export const AppContext = createContext();
 
@@ -52,8 +53,13 @@ function App() {
               </div>
             </Route>
             <Route path="/plan">
-              <div className="bg-gray-100 h-[800px]">
+              <div className="bg-gray-100 h-[850px]">
                 <Plan />
+              </div>
+            </Route>
+            <Route path="/add-ons">
+              <div className="bg-gray-100 h-[800px]">
+                <AddOns />
               </div>
             </Route>
           </Switch>

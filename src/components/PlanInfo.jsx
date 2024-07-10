@@ -3,6 +3,9 @@ import advanced from "../assets/images/icon-advanced.svg";
 import pro from "../assets/images/icon-pro.svg";
 import { useContext, useRef, useState } from "react";
 import { AppContext } from "../App";
+import PlanNextStepBtn from "./Plan/PlanNextStepBtn";
+import PlanSwitch from "./Plan/PlanSwitch";
+import Toggle from "./Plan/Toggle";
 
 export default function PlanInfo() {
   const arcadeRef = useRef(null);
@@ -66,14 +69,14 @@ export default function PlanInfo() {
               <span
                 value="Arcade"
                 style={{ fontSize: "18px" }}
-                className="font-bold"
+                className="font-bold text-blue-950"
               >
                 Arcade
               </span>
               <span style={{ fontSize: "18px" }} className="opacity-50">
                 $90/yr
               </span>
-              <span className="font-semibold">2 months free</span>
+              <span className="font-semibold text-blue-950">2 months free</span>
               {/* {planType} */}
             </div>
           </div>
@@ -88,13 +91,16 @@ export default function PlanInfo() {
               <img src={advanced} alt="" className="w-12" />
             </div>
             <div className="flex flex-col gap-1">
-              <span style={{ fontSize: "18px" }} className="font-bold">
+              <span
+                style={{ fontSize: "18px" }}
+                className="font-bold text-blue-950"
+              >
                 Advanced
               </span>
               <span style={{ fontSize: "18px" }} className="opacity-50">
                 $120/yr
               </span>
-              <span className="font-semibold">2 months free</span>
+              <span className="font-semibold text-blue-950">2 months free</span>
             </div>
           </div>
 
@@ -108,16 +114,27 @@ export default function PlanInfo() {
               <img src={pro} alt="" className="w-12" />
             </div>
             <div className="flex flex-col gap-1">
-              <span style={{ fontSize: "18px" }} className="font-bold">
+              <span
+                style={{ fontSize: "18px" }}
+                className="font-bold text-blue-950"
+              >
                 Pro
               </span>
               <span style={{ fontSize: "18px" }} className="opacity-50">
                 $150/yr
               </span>
-              <span className="font-semibold">2 months free</span>
+              <span className="font-semibold text-blue-950">2 months free</span>
             </div>
           </div>
         </div>
+
+        {/* //Toggle monthly/yearly. */}
+        <div>
+          <Toggle />
+        </div>
+      </div>
+      <div>
+        <PlanNextStepBtn />
       </div>
     </div>
   );
