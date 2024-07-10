@@ -1,12 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../../App.css";
+import { AppContext } from "../../App";
 
 const Toggle = () => {
-  const [isToggled, setIsToggled] = useState(false);
-
-  function handleToggle() {
-    setIsToggled(!isToggled);
-  }
+  const { isToggled, handleToggle } = useContext(AppContext);
 
   return (
     <div>

@@ -19,13 +19,11 @@ function App() {
   const [error, setError] = useState("");
   const [planType, setPlanType] = useState("");
   const [planPayment, setPlanPayment] = useState("");
+  const [isToggled, setIsToggled] = useState(false);
 
-  //plan details.
-  // const planDetails = [{
-  //   id: 1,
-  //   planType: "Arcade",
-  //   planPayment: "$90"
-  // }]
+  function handleToggle() {
+    setIsToggled(!isToggled);
+  }
 
   return (
     <div>
@@ -43,6 +41,9 @@ function App() {
           planType,
           setPlanPayment,
           planPayment,
+          setIsToggled,
+          isToggled,
+          handleToggle,
         }}
       >
         <Router>

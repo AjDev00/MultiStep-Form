@@ -46,6 +46,7 @@ export default function PersonalInfo() {
             className="border border-slate-300 p-2 rounded-sm mb-5 focus:outline-blue-950"
             onChange={(e) => setEmailInput(e.target.value)}
             value={emailInput}
+            required
           />
           <span className="-mt-4 mb-4 text-red-500">{error ? error : ""}</span>
 

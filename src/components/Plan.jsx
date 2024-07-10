@@ -1,5 +1,5 @@
 import PlanButtons from "./Plan/PlanButtons";
-import PlanInfo from "./PlanInfo";
+import PlanInfo from "./PlanMonthlyInfo";
 
 export default function Plan() {
   return (
