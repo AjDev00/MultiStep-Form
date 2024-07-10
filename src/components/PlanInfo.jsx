@@ -4,7 +4,6 @@ import pro from "../assets/images/icon-pro.svg";
 import { useContext, useRef, useState } from "react";
 import { AppContext } from "../App";
 import PlanNextStepBtn from "./Plan/PlanNextStepBtn";
-import PlanSwitch from "./Plan/PlanSwitch";
 import Toggle from "./Plan/Toggle";
 
 export default function PlanInfo() {
