@@ -9,6 +9,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import { createContext, useState } from "react";
 import AddOns from "./components/AddOns";
+import Finish from "./components/Finish";
 
 export const AppContext = createContext();
 
@@ -17,9 +18,19 @@ function App() {
   const [emailInput, setEmailInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
   const [error, setError] = useState("");
+
+  //plan parameters.
   const [planType, setPlanType] = useState("");
   const [planPayment, setPlanPayment] = useState("");
   const [isToggled, setIsToggled] = useState(false);
+
+  //add-ons parameters.
+  const [onlineType, setOnlineType] = useState("");
+  const [onlineAmount, setOnlineAmount] = useState("");
+  const [largerType, setLargerType] = useState("");
+  const [largerAmount, setLargerAmount] = useState("");
+  const [profileType, setProfileType] = useState("");
+  const [profileAmount, setProfileAmount] = useState("");
 
   function handleToggle() {
     setIsToggled(!isToggled);
@@ -44,6 +55,18 @@ function App() {
           setIsToggled,
           isToggled,
           handleToggle,
+          onlineType,
+          setOnlineType,
+          onlineAmount,
+          setOnlineAmount,
+          largerType,
+          setLargerType,
+          largerAmount,
+          setLargerAmount,
+          profileType,
+          setProfileType,
+          profileAmount,
+          setProfileAmount,
         }}
       >
         <Router>
@@ -59,8 +82,13 @@ function App() {
               </div>
             </Route>
             <Route path="/add-ons">
-              <div className="bg-gray-100 h-[800px]">
+              <div className="bg-gray-100 h-[700px]">
                 <AddOns />
+              </div>
+            </Route>
+            <Route path="/finish">
+              <div className="bg-gray-100 h-[700px]">
+                <Finish />
               </div>
             </Route>
           </Switch>

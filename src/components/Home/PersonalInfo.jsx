@@ -53,7 +53,7 @@ export default function PersonalInfo() {
           {/* //phone input. */}
           <span>Phone Number</span>
           <input
-            type="text"
+            type="number"
             placeholder="e.g. +1 234 567 890"
             className="border border-slate-300 p-2 rounded-sm focus:outline-blue-950"
             onChange={(e) => setPhoneInput(e.target.value)}

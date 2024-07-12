@@ -20,6 +20,7 @@ export default function PlanYearlyInfo() {
     proRef.current.style.border = "1px solid rgb(203 213 225)";
     proRef.current.style.backgroundColor = "white";
     setPlanType(arcadeRef.current.children[1].firstChild.innerText);
+    setPlanPayment(arcadeRef.current.children[1].children[1].innerText);
     console.log(planType);
   }
 
@@ -31,6 +32,7 @@ export default function PlanYearlyInfo() {
     proRef.current.style.border = "1px solid rgb(203 213 225)";
     proRef.current.style.backgroundColor = "white";
     setPlanType(advancedRef.current.children[1].firstChild.innerText);
+    setPlanPayment(advancedRef.current.children[1].children[1].innerText);
     console.log(planType);
   }
 
@@ -42,6 +44,7 @@ export default function PlanYearlyInfo() {
     advancedRef.current.style.border = "1px solid rgb(203 213 225)";
     advancedRef.current.style.backgroundColor = "white";
     setPlanType(proRef.current.children[1].firstChild.innerText);
+    setPlanPayment(proRef.current.children[1].children[1].innerText);
     console.log(planType);
   }
 
@@ -68,7 +71,8 @@ export default function PlanYearlyInfo() {
               $90/yr
             </span>
             <span className="font-semibold text-blue-950">2 months free</span>
-            {/* {planType} */}
+            {/* {planType}
+            {planPayment} */}
           </div>
         </div>
 

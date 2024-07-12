@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { AppContext } from "../../App";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
 export default function HomeButtons() {
   const history = useHistory();
@@ -13,6 +15,13 @@ export default function HomeButtons() {
     } else {
       history.push("/plan");
     }
+  }
+
+  function giveWarning() {
+    toast.error("Go through 2.", {
+      position: "bottom-right",
+      autoClose: 5000,
+    });
   }
 
   return (
@@ -30,13 +39,17 @@ export default function HomeButtons() {
         >
           2
         </div>
-        <div className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white">
+        <div
+          onClick={giveWarning}
+          className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white"
+        >
           3
         </div>
         <div className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white">
           4
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
