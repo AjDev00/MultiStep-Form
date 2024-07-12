@@ -87,7 +87,7 @@ function App() {
               </div>
             </Route>
             <Route path="/finish">
-              <div className="bg-gray-100 h-[700px]">
+              <div className="bg-gray-100 h-[630px]">
                 <Finish />
               </div>
             </Route>

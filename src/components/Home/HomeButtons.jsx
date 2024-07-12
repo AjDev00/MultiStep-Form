@@ -45,7 +45,10 @@ export default function HomeButtons() {
         >
           3
         </div>
-        <div className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white">
+        <div
+          onClick={giveWarning}
+          className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white"
+        >
           4
         </div>
       </div>

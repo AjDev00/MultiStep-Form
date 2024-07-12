@@ -92,7 +92,7 @@ export default function PlanInfo() {
                     Arcade
                   </span>
                   <span style={{ fontSize: "18px" }} className="opacity-50">
-                    $90/mo
+                    $9/mo
                   </span>
                   {/* {planType}
                   {planPayment} */}

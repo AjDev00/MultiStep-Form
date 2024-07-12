@@ -1,4 +1,6 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
 export default function PlanButtons() {
   const history = useHistory();
@@ -9,6 +11,13 @@ export default function PlanButtons() {
 
   function toAddOns() {
     history.push("/add-ons");
+  }
+
+  function giveWarning() {
+    toast.error("Go through 3.", {
+      position: "bottom-right",
+      autoClose: 5000,
+    });
   }
 
   return (
@@ -32,10 +41,14 @@ export default function PlanButtons() {
         >
           3
         </div>
-        <div className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white">
+        <div
+          onClick={giveWarning}
+          className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white"
+        >
           4
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

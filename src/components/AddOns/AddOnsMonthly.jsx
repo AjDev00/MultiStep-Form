@@ -210,7 +210,11 @@ export default function AddOnsMonthly() {
         </div>
       </div>
       <div>
-        <AddOnsNextStepBtn />
+        <AddOnsNextStepBtn
+          isOnlineChecked={isOnlineChecked}
+          isLargerChecked={isLargerChecked}
+          isProfileChecked={isProfileChecked}
+        />
       </div>
     </div>
   );

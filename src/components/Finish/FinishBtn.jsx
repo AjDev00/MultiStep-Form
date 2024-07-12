@@ -1,18 +1,18 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-export default function AddOnsBtn() {
+export default function FinishBtn() {
   const history = useHistory();
-
-  function toPlan() {
-    history.push("/plan");
-  }
 
   function toHome() {
     history.push("/");
   }
 
-  function toFinish() {
-    history.push("/finish");
+  function toAddOns() {
+    history.push("/add-ons");
+  }
+
+  function toPlan() {
+    history.push("/plan");
   }
 
   return (
@@ -33,13 +33,13 @@ export default function AddOnsBtn() {
         >
           2
         </div>
-        <div className="cursor-pointer p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full bg-teal-100 ">
-          3
-        </div>
         <div
-          onClick={toFinish}
+          onClick={toAddOns}
           className="cursor-pointer border-white border-2 p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full text-white"
         >
+          3
+        </div>
+        <div className="cursor-pointer border-transparent border p-2 w-10 h-10 items-center justify-center flex font-bold rounded-full bg-teal-100">
           4
         </div>
       </div>

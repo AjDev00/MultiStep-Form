@@ -1,10 +1,23 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
-export default function AddOnsNextStepBtn() {
+export default function AddOnsNextStepBtn({
+  isOnlineChecked,
+  isProfileChecked,
+  isLargerChecked,
+}) {
   const history = useHistory();
 
   function handleNextStep() {
+    // if (isOnlineChecked && isProfileChecked && isLargerChecked) {
+    //   toast.error("Please pick add-ons.", {
+    //     position: "top-right",
+    //     autoClose: 5000,
+    //   });
+    // } else {
     history.push("/finish");
+    // }
   }
 
   function goBack() {
@@ -32,6 +45,7 @@ export default function AddOnsNextStepBtn() {
           </span>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

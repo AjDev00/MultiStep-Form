@@ -1,14 +1,22 @@
 import { AppContext } from "../../App";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
 export default function PlanNextStepBtn() {
-  const { nameInput, emailInput, phoneInput, setError } =
-    useContext(AppContext);
+  const { planType, planPayment } = useContext(AppContext);
   const history = useHistory();
 
   function handleNextStep() {
-    history.push("/add-ons");
+    if (!planType && !planPayment) {
+      toast.error("Please select your plan.", {
+        position: "top-right",
+        autoClose: 5000,
+      });
+    } else {
+      history.push("/add-ons");
+    }
   }
 
   function goBack() {
@@ -36,6 +44,7 @@ export default function PlanNextStepBtn() {
           </span>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
