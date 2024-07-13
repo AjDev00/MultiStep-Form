@@ -73,7 +73,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/">
-              <div className="bg-gray-100 h-[700px]">
+              <div className="bg-gray-100 md:bg-white h-[700px]">
                 <Home />
               </div>
             </Route>

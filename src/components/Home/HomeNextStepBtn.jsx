@@ -21,7 +21,7 @@ export default function NextStepBtn() {
       <div>
         <span
           onClick={handleNextStep}
-          className="cursor-pointer border border-blue-950 text-white font-bold p-3 rounded-md float-right px-5 mr-4 bg-blue-950 mb-6"
+          className="cursor-pointer border border-blue-950 text-white font-bold p-3 rounded-md float-right px-5 mr-4 bg-blue-950 mb-6 md:mt-[440px] md:relative md:left-[450px]"
         >
           Next Step
         </span>

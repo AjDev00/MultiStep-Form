@@ -20,8 +20,8 @@ export default function PersonalInfo() {
   }
 
   return (
-    <div>
-      <div className="font-bold rounded-md border border-white bg-white px-5 py-10 w-80 relative bottom-28 ml-5 min-[375px]:ml-9 min-[414px]:ml-8 min-[414px]:w-[350px] shadow-md">
+    <div className="">
+      <div className="font-bold rounded-md border md:border-none md:rounded-none md:shadow-none md:bg-none border-white bg-white px-5 py-10 w-80 relative bottom-28 ml-5 min-[375px]:ml-9 min-[414px]:ml-8 min-[414px]:w-[350px] shadow-md md:text-nowrap md:absolute md:top-20">
         <h4 className="text-2xl mb-2">Personal Info</h4>
         <p style={{ fontSize: "18px" }} className="opacity-45 mb-8">
           Please provide your name, email, address and phone number.
@@ -32,7 +32,7 @@ export default function PersonalInfo() {
           <input
             type="text"
             placeholder="e.g. Stephen King"
-            className="border border-slate-300 p-2 rounded-sm mb-5 focus:outline-blue-950"
+            className="border border-slate-300 p-2 rounded-md mb-5 focus:outline-blue-950 md:w-[510px]"
             onChange={handleChange}
             value={nameInput}
           />
@@ -43,7 +43,7 @@ export default function PersonalInfo() {
           <input
             type="email"
             placeholder="e.g. stephenking@gmail.com"
-            className="border border-slate-300 p-2 rounded-sm mb-5 focus:outline-blue-950"
+            className="border border-slate-300 p-2 rounded-md mb-5 focus:outline-blue-950 md:w-[510px]"
             onChange={(e) => setEmailInput(e.target.value)}
             value={emailInput}
             required
@@ -55,7 +55,7 @@ export default function PersonalInfo() {
           <input
             type="number"
             placeholder="e.g. +1 234 567 890"
-            className="border border-slate-300 p-2 rounded-sm focus:outline-blue-950"
+            className="border border-slate-300 p-2 rounded-md focus:outline-blue-950 md:w-[510px]"
             onChange={(e) => setPhoneInput(e.target.value)}
             value={phoneInput}
           />

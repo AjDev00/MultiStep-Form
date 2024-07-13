@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         mobileHomeBgImage: "url('/src/assets/images/bg-sidebar-mobile.svg')",
+        desktopHomeBgImage: "url('/src/assets/images/bg-sidebar-desktop.svg')",
       },
       fontFamily: {
         ubuntu: ["Ubuntu"],
