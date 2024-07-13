@@ -25,7 +25,7 @@ export default function PlanNextStepBtn() {
 
   return (
     <div>
-      <div className="flex flex-row justify-between px-5 mt-28 pb-10">
+      <div className="flex flex-row justify-between px-5 mt-28 pb-10 md:mt-14">
         <div>
           <span
             style={{ fontSize: "18px" }}

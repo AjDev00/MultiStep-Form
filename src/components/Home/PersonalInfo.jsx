@@ -22,13 +22,16 @@ export default function PersonalInfo() {
   return (
     <div className="">
       <div className="font-bold rounded-md border md:border-none md:rounded-none md:shadow-none md:bg-none border-white bg-white px-5 py-10 w-80 relative bottom-28 ml-5 min-[375px]:ml-9 min-[414px]:ml-8 min-[414px]:w-[350px] shadow-md md:text-nowrap md:absolute md:top-20">
-        <h4 className="text-2xl mb-2">Personal Info</h4>
-        <p style={{ fontSize: "18px" }} className="opacity-45 mb-8">
+        <h4 className="text-2xl mb-2 text-blue-950">Personal Info</h4>
+        <p
+          style={{ fontSize: "18px" }}
+          className="opacity-45 mb-8 text-blue-950"
+        >
           Please provide your name, email, address and phone number.
         </p>
         <div className="flex flex-col">
           {/* //name input. */}
-          <span>Name</span>
+          <span className="text-blue-950">Name</span>
           <input
             type="text"
             placeholder="e.g. Stephen King"
@@ -39,7 +42,7 @@ export default function PersonalInfo() {
           <span className="-mt-4 mb-4 text-red-500">{error ? error : ""}</span>
 
           {/* //email input. */}
-          <span>Email Address</span>
+          <span className="text-blue-950">Email Address</span>
           <input
             type="email"
             placeholder="e.g. stephenking@gmail.com"
@@ -51,7 +54,7 @@ export default function PersonalInfo() {
           <span className="-mt-4 mb-4 text-red-500">{error ? error : ""}</span>
 
           {/* //phone input. */}
-          <span>Phone Number</span>
+          <span className="text-blue-950">Phone Number</span>
           <input
             type="number"
             placeholder="e.g. +1 234 567 890"

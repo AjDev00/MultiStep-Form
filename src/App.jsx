@@ -78,7 +78,7 @@ function App() {
               </div>
             </Route>
             <Route path="/plan">
-              <div className="bg-gray-100 h-[850px]">
+              <div className="bg-gray-100 md:bg-white h-[850px]">
                 <Plan />
               </div>
             </Route>

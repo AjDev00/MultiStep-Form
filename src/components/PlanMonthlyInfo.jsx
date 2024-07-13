@@ -62,9 +62,12 @@ export default function PlanInfo() {
 
   return (
     <div>
-      <div className="border border-white bg-white px-5 py-10 w-80 ml-5 mt-12 rounded-md  min-[375px]:ml-9 min-[414px]:ml-8 min-[414px]:w-[350px] shadow-md">
+      <div className="border border-white bg-white px-5 py-10 w-80 ml-5 mt-12 rounded-md min-[375px]:ml-9 min-[414px]:ml-8 min-[414px]:w-[350px] shadow-md md:mt-0 md:border-none md:bg-transparent md:shadow-none md:py-0">
         <h4 className="text-2xl mb-2 font-bold">Select your plan</h4>
-        <p style={{ fontSize: "18px" }} className="opacity-50 mb-8">
+        <p
+          style={{ fontSize: "18px" }}
+          className="opacity-50 mb-8 md:text-nowrap"
+        >
           You have the option of monthly or yearly billing.
         </p>
         <div>
@@ -73,15 +76,15 @@ export default function PlanInfo() {
               <PlanYearlyInfo />
             </div>
           ) : (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 md:flex-row">
               {/* //arcade. */}
               <div
                 onClick={handleArcadeClick}
-                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer"
+                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:p-10"
                 ref={arcadeRef}
               >
                 <div>
-                  <img src={arcade} alt="" className="w-12" />
+                  <img src={arcade} alt="" className="w-12 " />
                 </div>
                 <div className="flex flex-col gap-1">
                   <span
@@ -102,7 +105,7 @@ export default function PlanInfo() {
               {/* //advanced. */}
               <div
                 onClick={handleAdvancedClick}
-                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer"
+                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:p-10 md:w-96"
                 ref={advancedRef}
               >
                 <div>
@@ -124,7 +127,7 @@ export default function PlanInfo() {
               {/* //pro. */}
               <div
                 onClick={handleProClick}
-                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer"
+                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:p-10 md:w-96"
                 ref={proRef}
               >
                 <div>

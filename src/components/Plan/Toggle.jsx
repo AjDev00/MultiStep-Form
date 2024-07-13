@@ -7,7 +7,7 @@ const Toggle = () => {
 
   return (
     <div>
-      <div className="flex flex-row justify-between px-6 items-center mt-10 border border-transparent bg-gray-100 p-4 rounded-md">
+      <div className="flex flex-row justify-between px-6 items-center mt-10 border border-transparent bg-gray-100 p-4 rounded-md md:w-[480px] md:px-32">
         <span style={{ fontSize: "16px" }} className="font-bold text-blue-950">
           Monthly
         </span>
