@@ -36,7 +36,7 @@ export default function FinishPage() {
 
   return (
     <div>
-      <div className="border border-white bg-white h-[430px] w-80 ml-5 p-4 py-7 px-5 rounded-md shadow-lg mt-12">
+      <div className="border border-white bg-white h-[430px] w-80 ml-5 p-4 py-7 px-5 rounded-md shadow-lg min-[375px]:ml-9 min-[414px]:ml-12 mt-12">
         <h4 className="font-bold text-2xl text-blue-950">Finishing up</h4>
         <p className="opacity-45 font-semibold mt-3 mb-6">
           Double-check everything looks OK before confirming.

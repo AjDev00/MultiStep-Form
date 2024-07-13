@@ -2,11 +2,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
 
-export default function AddOnsNextStepBtn({
-  isOnlineChecked,
-  isProfileChecked,
-  isLargerChecked,
-}) {
+export default function AddOnsNextStepBtn() {
   const history = useHistory();
 
   function handleNextStep() {

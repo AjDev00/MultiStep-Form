@@ -10,6 +10,7 @@ import {
 import { createContext, useState } from "react";
 import AddOns from "./components/AddOns";
 import Finish from "./components/Finish";
+import Confirm from "./components/Confirm";
 
 export const AppContext = createContext();
 
@@ -89,6 +90,11 @@ function App() {
             <Route path="/finish">
               <div className="bg-gray-100 h-[630px]">
                 <Finish />
+              </div>
+            </Route>
+            <Route path="/confirm">
+              <div className="bg-gray-100 h-screen">
+                <Confirm />
               </div>
             </Route>
           </Switch>
