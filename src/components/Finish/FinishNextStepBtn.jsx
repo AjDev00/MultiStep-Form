@@ -29,11 +29,11 @@ export default function FinishNextStepBtn() {
 
   return (
     <div>
-      <div className="flex flex-row justify-between px-5 mt-28 pb-20">
+      <div className="flex flex-row justify-between px-5 mt-28 pb-20 md:mt-0 md:ml-7">
         <div>
           <span
             style={{ fontSize: "18px" }}
-            className="opacity-45 font-semibold"
+            className="opacity-45 font-semibold cursor-pointer md:text-nowrap"
             onClick={goBack}
           >
             Go Back
@@ -42,7 +42,7 @@ export default function FinishNextStepBtn() {
         <div>
           <span
             onClick={handleNextStep}
-            className="cursor-pointer border border-blue-800 text-white font-bold p-3 rounded-md bg-blue-800"
+            className="cursor-pointer border border-blue-800 text-white font-bold p-3 rounded-md bg-blue-800 md:ml-60"
           >
             Confirm
           </span>

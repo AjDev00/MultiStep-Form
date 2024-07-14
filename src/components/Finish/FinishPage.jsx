@@ -36,12 +36,12 @@ export default function FinishPage() {
 
   return (
     <div>
-      <div className="border border-white bg-white h-[430px] w-80 ml-5 p-4 py-7 px-5 rounded-md shadow-lg min-[375px]:ml-9 min-[414px]:ml-12 mt-12">
+      <div className="border border-white bg-white h-[430px] w-80 ml-5 p-4 py-7 px-5 rounded-md shadow-lg min-[375px]:ml-9 min-[414px]:ml-12 mt-12 md:border-none md:shadow-none md:bg-none md:px-0 md:mt-0">
         <h4 className="font-bold text-2xl text-blue-950">Finishing up</h4>
-        <p className="opacity-45 font-semibold mt-3 mb-6">
+        <p className="opacity-45 font-semibold mt-3 mb-6 md:text-nowrap">
           Double-check everything looks OK before confirming.
         </p>
-        <div className="flex flex-col gap-4 border border-transparent bg-slate-100 p-4 rounded-md">
+        <div className="flex flex-col gap-4 border border-transparent bg-slate-100 p-4 rounded-md md:w-96">
           <div className="flex flex-row justify-between px-0 items-center">
             <div className="flex flex-col">
               <div
@@ -95,11 +95,14 @@ export default function FinishPage() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-between px-4 pt-5">
+        <div className="flex flex-row justify-between px-4 pt-5 md:px-0">
           <div className="opacity-50 font-semibold">
             Total {isToggled ? "(per year)" : "(per month)"}
           </div>
-          <div style={{ fontSize: "17px" }} className="text-blue-800 font-bold">
+          <div
+            style={{ fontSize: "17px" }}
+            className="text-blue-800 font-bold md:-mr-14"
+          >
             +$120/yr
           </div>
         </div>

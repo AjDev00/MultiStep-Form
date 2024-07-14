@@ -50,14 +50,14 @@ export default function PlanYearlyInfo() {
 
   return (
     <div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 md:flex-row">
         <div
           onClick={handleArcadeClick}
-          className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer"
+          className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:pr-10 md:gap-14"
           ref={arcadeRef}
         >
           <div>
-            <img src={arcade} alt="" className="w-12" />
+            <img src={arcade} alt="" className="w-12 md:w-9" />
           </div>
           <div className="flex flex-col gap-1">
             <span
@@ -70,7 +70,9 @@ export default function PlanYearlyInfo() {
             <span style={{ fontSize: "18px" }} className="opacity-50">
               $90/yr
             </span>
-            <span className="font-semibold text-blue-950">2 months free</span>
+            <span className="font-semibold text-blue-950 md:text-nowrap">
+              2 months free
+            </span>
             {/* {planType}
             {planPayment} */}
           </div>
@@ -79,11 +81,11 @@ export default function PlanYearlyInfo() {
         {/* //advanced. */}
         <div
           onClick={handleAdvancedClick}
-          className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer"
+          className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:pr-10 md:gap-14"
           ref={advancedRef}
         >
           <div>
-            <img src={advanced} alt="" className="w-12" />
+            <img src={advanced} alt="" className="w-12 md:w-9" />
           </div>
           <div className="flex flex-col gap-1">
             <span
@@ -95,18 +97,20 @@ export default function PlanYearlyInfo() {
             <span style={{ fontSize: "18px" }} className="opacity-50">
               $120/yr
             </span>
-            <span className="font-semibold text-blue-950">2 months free</span>
+            <span className="font-semibold text-blue-950 text-nowrap">
+              2 months free
+            </span>
           </div>
         </div>
 
         {/* //pro. */}
         <div
           onClick={handleProClick}
-          className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer"
+          className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:pr-10 md:gap-14"
           ref={proRef}
         >
           <div>
-            <img src={pro} alt="" className="w-12" />
+            <img src={pro} alt="" className="w-12 md:w-9" />
           </div>
           <div className="flex flex-col gap-1">
             <span
@@ -118,7 +122,9 @@ export default function PlanYearlyInfo() {
             <span style={{ fontSize: "18px" }} className="opacity-50">
               $150/yr
             </span>
-            <span className="font-semibold text-blue-950">2 months free</span>
+            <span className="font-semibold text-blue-950 md:text-nowrap">
+              2 months free
+            </span>
           </div>
         </div>
       </div>

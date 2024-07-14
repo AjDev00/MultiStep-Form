@@ -90,9 +90,9 @@ export default function AddOnsMonthly() {
 
   return (
     <div>
-      <div className="border border-white bg-white w-80 ml-5 p-4 py-7 px-5 rounded-md shadow-lg mt-12 h-[540px] min-[375px]:ml-9 min-[414px]:ml-8 min-[414px]:w-[350px]">
+      <div className="md:border-none md:bg-none md:shadow-none border border-white bg-white w-80 ml-5 p-4 py-7 px-5 rounded-md shadow-lg mt-12 h-[540px] min-[375px]:ml-9 min-[414px]:ml-8 min-[414px]:w-[350px] md:py-0 md:ml-0 md:mt-2 md:h-0">
         <h4 className="font-bold text-2xl text-blue-950">Pick add-ons</h4>
-        <p className="opacity-45 font-semibold mt-3 mb-6">
+        <p className="opacity-45 font-semibold mt-3 mb-6 md:text-nowrap">
           Add-ons help enhance your gaming experience.
         </p>
         <div className="">
@@ -106,7 +106,7 @@ export default function AddOnsMonthly() {
               <div
                 onClick={handleOnlineClick}
                 ref={onlineRef}
-                className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80"
+                className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80 md:w-[500px]"
               >
                 <input
                   onClick={handleIsOnlineChecked}
@@ -121,14 +121,14 @@ export default function AddOnsMonthly() {
                     <h6 className="font-bold text-blue-950">Online service</h6>
                     <p
                       style={{ fontSize: "15px" }}
-                      className="font-semibold opacity-45"
+                      className="font-semibold opacity-45 md:text-nowrap"
                     >
                       Access to multiplayer games
                     </p>
                   </div>
                   <span
                     style={{ fontSize: "14px" }}
-                    className=" text-blue-800 min-[414px]:ml-12"
+                    className=" text-blue-800 min-[414px]:ml-12 md:ml-48"
                   >
                     +$1/mo
                   </span>
@@ -143,7 +143,7 @@ export default function AddOnsMonthly() {
               <div
                 onClick={handleLargerClick}
                 ref={largerRef}
-                className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80"
+                className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80 md:w-[500px]"
               >
                 <input
                   onClick={handleIsLargerChecked}
@@ -157,14 +157,14 @@ export default function AddOnsMonthly() {
                     <h6 className="font-bold text-blue-950">Larger storage</h6>
                     <p
                       style={{ fontSize: "15px" }}
-                      className="font-semibold opacity-45 text-wrap"
+                      className="font-semibold opacity-45 text-wrap md:text-nowrap"
                     >
                       Extra 1TB of cloud save
                     </p>
                   </div>
                   <span
                     style={{ fontSize: "14px" }}
-                    className=" text-blue-800 ml-12"
+                    className=" text-blue-800 ml-12 md:ml-56"
                   >
                     +$2/mo
                   </span>
@@ -177,7 +177,7 @@ export default function AddOnsMonthly() {
               <div
                 onClick={handleProfileClick}
                 ref={profileRef}
-                className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80"
+                className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80 md:w-[500px]"
               >
                 <input
                   onClick={handleIsProfileChecked}
@@ -193,12 +193,15 @@ export default function AddOnsMonthly() {
                     </h6>
                     <p
                       style={{ fontSize: "15px" }}
-                      className="font-semibold opacity-45"
+                      className="font-semibold opacity-45 md:text-nowrap"
                     >
                       Custom theme on your profile
                     </p>
                   </div>
-                  <span style={{ fontSize: "14px" }} className=" text-blue-800">
+                  <span
+                    style={{ fontSize: "14px" }}
+                    className=" text-blue-800 md:ml-44"
+                  >
                     +$2/mo
                   </span>
                 </div>

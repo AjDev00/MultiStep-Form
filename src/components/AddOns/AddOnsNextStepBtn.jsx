@@ -22,11 +22,11 @@ export default function AddOnsNextStepBtn() {
 
   return (
     <div>
-      <div className="flex flex-row justify-between px-5 mt-28 pb-10">
+      <div className="flex flex-row justify-between px-5 mt-28 pb-10 md:mt-[450px]">
         <div>
           <span
             style={{ fontSize: "18px" }}
-            className="opacity-45 font-semibold"
+            className="opacity-45 font-semibold md:text-nowrap cursor-pointer"
             onClick={goBack}
           >
             Go Back
@@ -35,7 +35,7 @@ export default function AddOnsNextStepBtn() {
         <div>
           <span
             onClick={handleNextStep}
-            className="cursor-pointer border border-blue-950 text-white font-bold p-3 rounded-md bg-blue-950"
+            className="cursor-pointer border border-blue-950 text-white font-bold p-3 rounded-md bg-blue-950 md:ml-[330px] md:text-nowrap"
           >
             Next Step
           </span>

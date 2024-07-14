@@ -80,11 +80,11 @@ export default function PlanInfo() {
               {/* //arcade. */}
               <div
                 onClick={handleArcadeClick}
-                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:p-10"
+                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:pr-16 md:gap-14"
                 ref={arcadeRef}
               >
                 <div>
-                  <img src={arcade} alt="" className="w-12 " />
+                  <img src={arcade} alt="" className="w-12 md:w-9 " />
                 </div>
                 <div className="flex flex-col gap-1">
                   <span
@@ -105,11 +105,11 @@ export default function PlanInfo() {
               {/* //advanced. */}
               <div
                 onClick={handleAdvancedClick}
-                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:p-10 md:w-96"
+                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:pr-16 md:gap-14"
                 ref={advancedRef}
               >
                 <div>
-                  <img src={advanced} alt="" className="w-12" />
+                  <img src={advanced} alt="" className="w-12 md:w-9" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <span
@@ -127,11 +127,11 @@ export default function PlanInfo() {
               {/* //pro. */}
               <div
                 onClick={handleProClick}
-                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:p-10 md:w-96"
+                className="flex flex-row border border-slate-300 p-4 gap-4 rounded-md cursor-pointer md:flex-col md:pr-16 md:gap-14"
                 ref={proRef}
               >
                 <div>
-                  <img src={pro} alt="" className="w-12" />
+                  <img src={pro} alt="" className="w-12 md:w-9" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <span

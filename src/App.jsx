@@ -83,17 +83,17 @@ function App() {
               </div>
             </Route>
             <Route path="/add-ons">
-              <div className="bg-gray-100 h-[700px]">
+              <div className="bg-gray-100 md:bg-white h-[700px]">
                 <AddOns />
               </div>
             </Route>
             <Route path="/finish">
-              <div className="bg-gray-100 h-[630px]">
+              <div className="bg-gray-100 md:bg-white h-[630px]">
                 <Finish />
               </div>
             </Route>
             <Route path="/confirm">
-              <div className="bg-gray-100 h-screen">
+              <div className="bg-gray-100 md:bg-white h-screen">
                 <Confirm />
               </div>
             </Route>

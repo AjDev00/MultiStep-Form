@@ -1,8 +1,11 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
+import { useContext } from "react";
+import { AppContext } from "../../App";
 
 export default function PlanButtons() {
+  const { planType, planPayment } = useContext(AppContext);
   const history = useHistory();
 
   function toHome() {
@@ -18,6 +21,17 @@ export default function PlanButtons() {
       position: "bottom-right",
       autoClose: 5000,
     });
+  }
+
+  function toAddOns() {
+    if (!planType && !planPayment) {
+      toast.error("Please select your plan.", {
+        position: "top-right",
+        autoClose: 5000,
+      });
+    } else {
+      history.push("/add-ons");
+    }
   }
 
   return (

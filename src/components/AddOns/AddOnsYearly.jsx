@@ -92,7 +92,7 @@ export default function AddOnsYearly() {
         <div
           onClick={handleOnlineClick}
           ref={onlineRef}
-          className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80"
+          className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80 md:w-[500px]"
         >
           <input
             onClick={handleIsOnlineChecked}
@@ -106,14 +106,14 @@ export default function AddOnsYearly() {
               <h6 className="font-bold text-blue-950">Online service</h6>
               <p
                 style={{ fontSize: "15px" }}
-                className="font-semibold opacity-45"
+                className="font-semibold opacity-45 md:text-nowrap"
               >
                 Access to multiplayer games
               </p>
             </div>
             <span
               style={{ fontSize: "14px" }}
-              className=" text-blue-800 min-[414px]:ml-12"
+              className=" text-blue-800 min-[414px]:ml-12 md:ml-48"
             >
               +$10/yr
             </span>
@@ -128,7 +128,7 @@ export default function AddOnsYearly() {
         <div
           onClick={handleLargerClick}
           ref={largerRef}
-          className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80"
+          className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80 md:w-[500px]"
         >
           <input
             onClick={handleIsLargerChecked}
@@ -142,12 +142,15 @@ export default function AddOnsYearly() {
               <h6 className="font-bold text-blue-950">Larger storage</h6>
               <p
                 style={{ fontSize: "15px" }}
-                className="font-semibold opacity-45 text-wrap"
+                className="font-semibold opacity-45 text-wrap md:text-nowrap"
               >
                 Extra 1TB of cloud save
               </p>
             </div>
-            <span style={{ fontSize: "14px" }} className=" text-blue-800 ml-12">
+            <span
+              style={{ fontSize: "14px" }}
+              className=" text-blue-800 ml-12 md:ml-56"
+            >
               +$20/yr
             </span>
           </div>
@@ -161,7 +164,7 @@ export default function AddOnsYearly() {
         <div
           onClick={handleProfileClick}
           ref={profileRef}
-          className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80"
+          className="flex flex-row items-center border border-slate-300 p-5 rounded-md w-72 -ml-1 min-[414px]:w-80 md:w-[500px]"
         >
           <input
             onClick={handleIsProfileChecked}
@@ -175,12 +178,15 @@ export default function AddOnsYearly() {
               <h6 className="font-bold text-blue-950">Customizable profile</h6>
               <p
                 style={{ fontSize: "15px" }}
-                className="font-semibold opacity-45"
+                className="font-semibold opacity-45 md:text-nowrap"
               >
                 Custom theme on your profile
               </p>
             </div>
-            <span style={{ fontSize: "14px" }} className=" text-blue-800">
+            <span
+              style={{ fontSize: "14px" }}
+              className=" text-blue-800 md:ml-44"
+            >
               +$20/yr
             </span>
           </div>
