@@ -34,6 +34,11 @@ export default function FinishPage() {
     setProfileAmount("");
   }
 
+  const [total, setTotal] = useState(0);
+  function getTotal() {
+    setTotal(eval(planPayment + onlineAmount + largerAmount + profileAmount));
+  }
+
   return (
     <div>
       <div className="border border-white bg-white h-[430px] w-80 ml-5 p-4 py-7 px-5 rounded-md shadow-lg min-[375px]:ml-9 min-[414px]:ml-12 mt-12 md:border-none md:shadow-none md:bg-none md:px-0 md:mt-0">
@@ -62,7 +67,9 @@ export default function FinishPage() {
               style={{ fontSize: "16px" }}
               className="font-bold text-blue-950"
             >
-              {planPayment ? planPayment : ""}
+              <span>$</span>
+              <span>{planPayment ? planPayment : ""}</span>
+              <span>{isToggled ? "/yr" : "/mo"}</span>
             </div>
           </div>
           <div>
@@ -74,7 +81,15 @@ export default function FinishPage() {
                 {onlineType ? onlineType : ""}
               </div>
               <div className="font-semibold text-blue-950">
-                {onlineAmount ? onlineAmount : ""}
+                {onlineAmount ? (
+                  <div>
+                    <span>$</span>
+                    <span>{onlineAmount ? onlineAmount : ""}</span>
+                    <span>{isToggled ? "/yr" : "/mo"}</span>
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
             <div className="flex flex-row justify-between px-0">
@@ -82,7 +97,15 @@ export default function FinishPage() {
                 {largerType ? largerType : ""}
               </div>
               <div className="font-semibold text-blue-950">
-                {largerAmount ? largerAmount : ""}
+                {largerAmount ? (
+                  <div>
+                    <span>$</span>
+                    <span>{largerAmount ? largerAmount : ""}</span>
+                    <span>{isToggled ? "/yr" : "/mo"}</span>
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
             <div className="flex flex-row justify-between px-0">
@@ -90,20 +113,28 @@ export default function FinishPage() {
                 {profileType ? profileType : ""}
               </div>
               <div className="font-semibold text-blue-950">
-                {profileAmount ? profileAmount : ""}
+                {profileAmount ? (
+                  <div>
+                    <span>$</span>
+                    <span>{profileAmount ? profileAmount : ""}</span>
+                    <span>{isToggled ? "/yr" : "/mo"}</span>
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-row justify-between px-4 pt-5 md:px-0">
-          <div className="opacity-50 font-semibold">
+          <div onClick={getTotal} className="opacity-50 font-semibold">
             Total {isToggled ? "(per year)" : "(per month)"}
           </div>
           <div
             style={{ fontSize: "17px" }}
             className="text-blue-800 font-bold md:-mr-14"
           >
-            +$120/yr
+            {total}
           </div>
         </div>
       </div>

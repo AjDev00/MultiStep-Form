@@ -12,12 +12,15 @@ export default function PersonalInfo() {
     setPhoneInput,
     error,
     setError,
+    emailValidity,
   } = useContext(AppContext);
 
   function handleChange(e) {
     setNameInput(e.target.value);
     setError("");
   }
+
+  console.log(emailInput.name);
 
   return (
     <div className="">
@@ -39,19 +42,32 @@ export default function PersonalInfo() {
             onChange={handleChange}
             value={nameInput}
           />
-          <span className="-mt-4 mb-4 text-red-500">{error ? error : ""}</span>
+          {nameInput ? (
+            ""
+          ) : (
+            <span className="-mt-4 mb-4 text-red-500">
+              {error ? error : ""}
+            </span>
+          )}
 
           {/* //email input. */}
           <span className="text-blue-950">Email Address</span>
           <input
-            type="email"
+            type={emailInput.type}
             placeholder="e.g. stephenking@gmail.com"
             className="border border-slate-300 p-2 rounded-md mb-5 focus:outline-blue-950 md:w-[510px]"
-            onChange={(e) => setEmailInput(e.target.value)}
-            value={emailInput}
+            onChange={(e) => setEmailInput({ name: e.target.value })}
+            value={emailInput.name}
             required
           />
-          <span className="-mt-4 mb-4 text-red-500">{error ? error : ""}</span>
+          {emailInput.name ? (
+            ""
+          ) : (
+            <span className="-mt-4 mb-4 text-red-500">
+              {error ? error : ""}
+              {emailValidity ? "Invalid email address" : ""}
+            </span>
+          )}
 
           {/* //phone input. */}
           <span className="text-blue-950">Phone Number</span>
@@ -62,7 +78,11 @@ export default function PersonalInfo() {
             onChange={(e) => setPhoneInput(e.target.value)}
             value={phoneInput}
           />
-          <span className="text-red-500">{error ? error : ""}</span>
+          {phoneInput ? (
+            ""
+          ) : (
+            <span className="text-red-500">{error ? error : ""}</span>
+          )}
         </div>
       </div>
       <div className="py-0">

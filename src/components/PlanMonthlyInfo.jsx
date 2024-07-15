@@ -24,8 +24,11 @@ export default function PlanInfo() {
     proRef.current.style.backgroundColor = "white";
     setPlanType(arcadeRef.current.children[1].firstChild.innerText);
     setPlanPayment(
-      arcadeRef.current.children[1].firstChild.nextElementSibling.innerText
+      arcadeRef.current.children[1].lastElementChild.children[1].innerText
     );
+    // setPlanPayment(
+    //   arcadeRef.current.children[1].firstChild.nextElementSibspanng.innerText
+    // );
     console.log(planType);
     console.log(planPayment);
   }
@@ -39,7 +42,7 @@ export default function PlanInfo() {
     proRef.current.style.backgroundColor = "white";
     setPlanType(advancedRef.current.children[1].firstChild.innerText);
     setPlanPayment(
-      advancedRef.current.children[1].firstChild.nextElementSibling.innerText
+      advancedRef.current.children[1].lastElementChild.children[1].innerText
     );
     console.log(planType);
     console.log(planPayment);
@@ -54,7 +57,7 @@ export default function PlanInfo() {
     advancedRef.current.style.backgroundColor = "white";
     setPlanType(proRef.current.children[1].firstChild.innerText);
     setPlanPayment(
-      proRef.current.children[1].firstChild.nextElementSibling.innerText
+      proRef.current.children[1].lastElementChild.children[1].innerText
     );
     console.log(planType);
     console.log(planPayment);
@@ -68,7 +71,7 @@ export default function PlanInfo() {
           style={{ fontSize: "18px" }}
           className="opacity-50 mb-8 md:text-nowrap"
         >
-          You have the option of monthly or yearly billing.
+          You have the option of monthly or yearly bilspanng.
         </p>
         <div>
           {isToggled ? (
@@ -95,7 +98,9 @@ export default function PlanInfo() {
                     Arcade
                   </span>
                   <span style={{ fontSize: "18px" }} className="opacity-50">
-                    $9/mo
+                    <span>$</span>
+                    <span>9</span>
+                    <span>/mo</span>
                   </span>
                   {/* {planType}
                   {planPayment} */}
@@ -119,7 +124,9 @@ export default function PlanInfo() {
                     Advanced
                   </span>
                   <span style={{ fontSize: "18px" }} className="opacity-50">
-                    $12/mo
+                    <span>$</span>
+                    <span>12</span>
+                    <span>/mo</span>
                   </span>
                 </div>
               </div>
@@ -141,7 +148,9 @@ export default function PlanInfo() {
                     Pro
                   </span>
                   <span style={{ fontSize: "18px" }} className="opacity-50">
-                    $15/mo
+                    <span>$</span>
+                    <span>15</span>
+                    <span>/mo</span>
                   </span>
                 </div>
               </div>

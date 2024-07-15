@@ -49,7 +49,11 @@ export default function AddOnsMonthly() {
       setOnlineType(
         onlineRef.current.children[1].firstChild.firstChild.innerText
       );
-      setOnlineAmount(onlineRef.current.children[1].lastChild.innerText);
+      setOnlineAmount(
+        onlineRef.current.children[1].children[1].children[2].innerText
+      );
+      console.log(onlineType);
+      console.log(onlineAmount);
     } else {
       onlineRef.current.style.border = "1px solid rgb(203 213 225)";
       onlineRef.current.style.backgroundColor = "white";
@@ -65,7 +69,11 @@ export default function AddOnsMonthly() {
       setLargerType(
         largerRef.current.children[1].firstChild.firstChild.innerText
       );
-      setLargerAmount(largerRef.current.children[1].lastChild.innerText);
+      setLargerAmount(
+        largerRef.current.children[1].children[1].children[2].innerText
+      );
+      console.log(largerType);
+      console.log(largerAmount);
     } else {
       largerRef.current.style.border = "1px solid rgb(203 213 225)";
       largerRef.current.style.backgroundColor = "white";
@@ -81,7 +89,11 @@ export default function AddOnsMonthly() {
       setProfileType(
         profileRef.current.children[1].firstChild.firstChild.innerText
       );
-      setProfileAmount(profileRef.current.children[1].lastChild.innerText);
+      setProfileAmount(
+        profileRef.current.children[1].children[1].children[2].innerText
+      );
+      console.log(profileType);
+      console.log(profileAmount);
     } else {
       profileRef.current.style.border = "1px solid rgb(203 213 225)";
       profileRef.current.style.backgroundColor = "white";
@@ -130,7 +142,10 @@ export default function AddOnsMonthly() {
                     style={{ fontSize: "14px" }}
                     className=" text-blue-800 min-[414px]:ml-12 md:ml-48"
                   >
-                    +$1/mo
+                    <span>+</span>
+                    <span>$</span>
+                    <span>1</span>
+                    <span>/mo</span>
                   </span>
                 </div>
                 {/* <div>
@@ -166,7 +181,10 @@ export default function AddOnsMonthly() {
                     style={{ fontSize: "14px" }}
                     className=" text-blue-800 ml-12 md:ml-56"
                   >
-                    +$2/mo
+                    <span>+</span>
+                    <span>$</span>
+                    <span>2</span>
+                    <span>/mo</span>
                   </span>
                 </div>
                 {/* {largerAmount}
@@ -202,7 +220,10 @@ export default function AddOnsMonthly() {
                     style={{ fontSize: "14px" }}
                     className=" text-blue-800 md:ml-44"
                   >
-                    +$2/mo
+                    <span>+</span>
+                    <span>$</span>
+                    <span>2</span>
+                    <span>/mo</span>
                   </span>
                 </div>
                 {/* {profileAmount}

@@ -4,13 +4,23 @@ import { useContext } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function NextStepBtn() {
-  const { nameInput, emailInput, phoneInput, setError } =
-    useContext(AppContext);
+  const {
+    nameInput,
+    emailInput,
+    phoneInput,
+    setError,
+    emailValidity,
+    setEmailValidity,
+  } = useContext(AppContext);
   const history = useHistory();
 
   function handleNextStep() {
-    if (nameInput === "" || emailInput === "" || phoneInput === "") {
+    // if (emailInput.type !== "email") {
+    //   setEmailValidity(true);
+    // }
+    if (nameInput === "" || emailInput.name === "" || phoneInput === "") {
       setError("This field cannot be empty");
+      // setEmailValidity(true);
     } else {
       history.push("/plan");
     }

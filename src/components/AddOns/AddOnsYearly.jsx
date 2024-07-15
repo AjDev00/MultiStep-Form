@@ -46,7 +46,11 @@ export default function AddOnsYearly() {
       setOnlineType(
         onlineRef.current.children[1].firstChild.firstChild.innerText
       );
-      setOnlineAmount(onlineRef.current.children[1].lastChild.innerText);
+      setOnlineAmount(
+        onlineRef.current.children[1].children[1].children[2].innerText
+      );
+      console.log(onlineType);
+      console.log(onlineAmount);
     } else {
       onlineRef.current.style.border = "1px solid rgb(203 213 225)";
       onlineRef.current.style.backgroundColor = "white";
@@ -62,7 +66,11 @@ export default function AddOnsYearly() {
       setLargerType(
         largerRef.current.children[1].firstChild.firstChild.innerText
       );
-      setLargerAmount(largerRef.current.children[1].lastChild.innerText);
+      setLargerAmount(
+        largerRef.current.children[1].children[1].children[2].innerText
+      );
+      console.log(largerType);
+      console.log(largerAmount);
     } else {
       largerRef.current.style.border = "1px solid rgb(203 213 225)";
       largerRef.current.style.backgroundColor = "white";
@@ -78,7 +86,11 @@ export default function AddOnsYearly() {
       setProfileType(
         profileRef.current.children[1].firstChild.firstChild.innerText
       );
-      setProfileAmount(profileRef.current.children[1].lastChild.innerText);
+      setProfileAmount(
+        profileRef.current.children[1].children[1].children[2].innerText
+      );
+      console.log(profileType);
+      console.log(profileAmount);
     } else {
       profileRef.current.style.border = "1px solid rgb(203 213 225)";
       profileRef.current.style.backgroundColor = "white";
@@ -115,7 +127,10 @@ export default function AddOnsYearly() {
               style={{ fontSize: "14px" }}
               className=" text-blue-800 min-[414px]:ml-12 md:ml-48"
             >
-              +$10/yr
+              <span>+</span>
+              <span>$</span>
+              <span>10</span>
+              <span>/yr</span>
             </span>
           </div>
           {/* <div>
@@ -151,7 +166,10 @@ export default function AddOnsYearly() {
               style={{ fontSize: "14px" }}
               className=" text-blue-800 ml-12 md:ml-56"
             >
-              +$20/yr
+              <span>+</span>
+              <span>$</span>
+              <span>20</span>
+              <span>/yr</span>
             </span>
           </div>
           {/* <div>
@@ -187,7 +205,10 @@ export default function AddOnsYearly() {
               style={{ fontSize: "14px" }}
               className=" text-blue-800 md:ml-44"
             >
-              +$20/yr
+              <span>+</span>
+              <span>$</span>
+              <span>20</span>
+              <span>/yr</span>
             </span>
           </div>
           {/* <div>

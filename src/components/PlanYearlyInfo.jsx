@@ -19,9 +19,12 @@ export default function PlanYearlyInfo() {
     advancedRef.current.style.backgroundColor = "white";
     proRef.current.style.border = "1px solid rgb(203 213 225)";
     proRef.current.style.backgroundColor = "white";
+    setPlanPayment(
+      arcadeRef.current.children[1].children[1].children[1].innerText
+    );
     setPlanType(arcadeRef.current.children[1].firstChild.innerText);
-    setPlanPayment(arcadeRef.current.children[1].children[1].innerText);
     console.log(planType);
+    console.log(planPayment);
   }
 
   function handleAdvancedClick() {
@@ -31,9 +34,12 @@ export default function PlanYearlyInfo() {
     arcadeRef.current.style.backgroundColor = "white";
     proRef.current.style.border = "1px solid rgb(203 213 225)";
     proRef.current.style.backgroundColor = "white";
+    setPlanPayment(
+      advancedRef.current.children[1].children[1].children[1].innerText
+    );
     setPlanType(advancedRef.current.children[1].firstChild.innerText);
-    setPlanPayment(advancedRef.current.children[1].children[1].innerText);
     console.log(planType);
+    console.log(planPayment);
   }
 
   function handleProClick() {
@@ -43,9 +49,12 @@ export default function PlanYearlyInfo() {
     arcadeRef.current.style.backgroundColor = "white";
     advancedRef.current.style.border = "1px solid rgb(203 213 225)";
     advancedRef.current.style.backgroundColor = "white";
+    setPlanPayment(
+      proRef.current.children[1].children[1].children[1].innerText
+    );
     setPlanType(proRef.current.children[1].firstChild.innerText);
-    setPlanPayment(proRef.current.children[1].children[1].innerText);
     console.log(planType);
+    console.log(planPayment);
   }
 
   return (
@@ -68,7 +77,9 @@ export default function PlanYearlyInfo() {
               Arcade
             </span>
             <span style={{ fontSize: "18px" }} className="opacity-50">
-              $90/yr
+              <span>$</span>
+              <span>90</span>
+              <span>/yr</span>
             </span>
             <span className="font-semibold text-blue-950 md:text-nowrap">
               2 months free
@@ -95,7 +106,9 @@ export default function PlanYearlyInfo() {
               Advanced
             </span>
             <span style={{ fontSize: "18px" }} className="opacity-50">
-              $120/yr
+              <span>$</span>
+              <span>120</span>
+              <span>/yr</span>
             </span>
             <span className="font-semibold text-blue-950 text-nowrap">
               2 months free
@@ -120,7 +133,9 @@ export default function PlanYearlyInfo() {
               Pro
             </span>
             <span style={{ fontSize: "18px" }} className="opacity-50">
-              $150/yr
+              <span>$</span>
+              <span>150</span>
+              <span>/yr</span>
             </span>
             <span className="font-semibold text-blue-950 md:text-nowrap">
               2 months free

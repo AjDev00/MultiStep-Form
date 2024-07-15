@@ -16,7 +16,8 @@ export const AppContext = createContext();
 
 function App() {
   const [nameInput, setNameInput] = useState("");
-  const [emailInput, setEmailInput] = useState("");
+  const [emailInput, setEmailInput] = useState({ name: "", type: "email" });
+  const [emailValidity, setEmailValidity] = useState(false);
   const [phoneInput, setPhoneInput] = useState("");
   const [error, setError] = useState("");
 
@@ -68,6 +69,8 @@ function App() {
           setProfileType,
           profileAmount,
           setProfileAmount,
+          emailValidity,
+          setEmailValidity,
         }}
       >
         <Router>
