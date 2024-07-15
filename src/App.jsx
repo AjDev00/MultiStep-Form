@@ -15,6 +15,7 @@ import Confirm from "./components/Confirm";
 export const AppContext = createContext();
 
 function App() {
+  //personal info parameters.
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState({ name: "", type: "email" });
   const [emailValidity, setEmailValidity] = useState(false);
@@ -34,6 +35,7 @@ function App() {
   const [profileType, setProfileType] = useState("");
   const [profileAmount, setProfileAmount] = useState("");
 
+  //handle monthly and yearly toggle.
   function handleToggle() {
     setIsToggled(!isToggled);
   }

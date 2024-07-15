@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../App";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import FinishNextStepBtn from "./FinishNextStepBtn";
@@ -35,9 +35,20 @@ export default function FinishPage() {
   }
 
   const [total, setTotal] = useState(0);
-  function getTotal() {
-    setTotal(eval(planPayment + onlineAmount + largerAmount + profileAmount));
-  }
+  const planPaymentNum = Number(planPayment);
+  const onlineAmountNum = Number(onlineAmount);
+  const largerAmountNum = Number(largerAmount);
+  const profileAmountNum = Number(profileAmount);
+
+  useEffect(() => {
+    function getTotal() {
+      setTotal(
+        planPaymentNum + onlineAmountNum + largerAmountNum + profileAmountNum
+      );
+    }
+
+    getTotal();
+  }, []);
 
   return (
     <div>
@@ -126,15 +137,17 @@ export default function FinishPage() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-between px-4 pt-5 md:px-0">
-          <div onClick={getTotal} className="opacity-50 font-semibold">
+        <div className="flex flex-row justify-between px-4 pt-5 md:px-2">
+          <div className="opacity-50 font-semibold">
             Total {isToggled ? "(per year)" : "(per month)"}
           </div>
           <div
             style={{ fontSize: "17px" }}
             className="text-blue-800 font-bold md:-mr-14"
           >
+            <span>$</span>
             {total}
+            <span>{isToggled ? "/yr" : "/mo"}</span>
           </div>
         </div>
       </div>

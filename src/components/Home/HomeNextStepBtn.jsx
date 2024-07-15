@@ -15,10 +15,13 @@ export default function NextStepBtn() {
   const history = useHistory();
 
   function handleNextStep() {
-    // if (emailInput.type !== "email") {
-    //   setEmailValidity(true);
-    // }
-    if (nameInput === "" || emailInput.name === "" || phoneInput === "") {
+    if (emailInput.type !== "email") {
+      setEmailValidity(true);
+    } else if (
+      nameInput === "" ||
+      emailInput.name === "" ||
+      phoneInput === ""
+    ) {
       setError("This field cannot be empty");
       // setEmailValidity(true);
     } else {
