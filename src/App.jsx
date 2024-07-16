@@ -18,7 +18,7 @@ function App() {
   //personal info parameters.
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState({ name: "", type: "email" });
-  const [emailValidity, setEmailValidity] = useState(false);
+  const [emailValidity, setEmailValidity] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
   const [error, setError] = useState("");
 

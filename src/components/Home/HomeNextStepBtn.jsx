@@ -4,27 +4,25 @@ import { useContext } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function NextStepBtn() {
-  const {
-    nameInput,
-    emailInput,
-    phoneInput,
-    setError,
-    emailValidity,
-    setEmailValidity,
-  } = useContext(AppContext);
+  const { nameInput, emailInput, phoneInput, setError, setEmailValidity } =
+    useContext(AppContext);
   const history = useHistory();
 
   function handleNextStep() {
-    if (emailInput.type !== "email") {
-      setEmailValidity(true);
-    } else if (
+    //email validation(valid emails only).
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isEmailValid = emailRegex.test(emailInput.name);
+
+    if (
       nameInput === "" ||
       emailInput.name === "" ||
+      !isEmailValid ||
       phoneInput === ""
     ) {
       setError("This field cannot be empty");
-      // setEmailValidity(true);
+      setEmailValidity("Invalid email address");
     } else {
+      setError("");
       history.push("/plan");
     }
   }

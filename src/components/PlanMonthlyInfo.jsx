@@ -12,8 +12,7 @@ export default function PlanInfo() {
   const advancedRef = useRef(null);
   const proRef = useRef(null);
 
-  const { planType, setPlanType, planPayment, setPlanPayment, isToggled } =
-    useContext(AppContext);
+  const { setPlanType, setPlanPayment, isToggled } = useContext(AppContext);
 
   function handleArcadeClick() {
     arcadeRef.current.style.border = "1px solid blue";
@@ -26,11 +25,6 @@ export default function PlanInfo() {
     setPlanPayment(
       arcadeRef.current.children[1].lastElementChild.children[1].innerText
     );
-    // setPlanPayment(
-    //   arcadeRef.current.children[1].firstChild.nextElementSibspanng.innerText
-    // );
-    console.log(planType);
-    console.log(planPayment);
   }
 
   function handleAdvancedClick() {
@@ -44,8 +38,6 @@ export default function PlanInfo() {
     setPlanPayment(
       advancedRef.current.children[1].lastElementChild.children[1].innerText
     );
-    console.log(planType);
-    console.log(planPayment);
   }
 
   function handleProClick() {
@@ -59,8 +51,6 @@ export default function PlanInfo() {
     setPlanPayment(
       proRef.current.children[1].lastElementChild.children[1].innerText
     );
-    console.log(planType);
-    console.log(planPayment);
   }
 
   return (
@@ -102,8 +92,6 @@ export default function PlanInfo() {
                     <span>9</span>
                     <span>/mo</span>
                   </span>
-                  {/* {planType}
-                  {planPayment} */}
                 </div>
               </div>
 

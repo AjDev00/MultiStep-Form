@@ -34,6 +34,7 @@ export default function FinishPage() {
     setProfileAmount("");
   }
 
+  //initialize a state variable to store the sum of plan payments and add-ons amount.
   const [total, setTotal] = useState(0);
   const planPaymentNum = Number(planPayment);
   const onlineAmountNum = Number(onlineAmount);

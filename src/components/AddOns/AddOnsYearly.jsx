@@ -4,17 +4,11 @@ import { useRef, useState } from "react";
 
 export default function AddOnsYearly() {
   const {
-    onlineType,
     setOnlineType,
-    onlineAmount,
     setOnlineAmount,
-    largerType,
     setLargerType,
-    largerAmount,
     setLargerAmount,
-    profileType,
     setProfileType,
-    profileAmount,
     setProfileAmount,
   } = useContext(AppContext);
 
@@ -38,8 +32,6 @@ export default function AddOnsYearly() {
   }
 
   function handleOnlineClick() {
-    // console.log(isChecked);
-    // setIsChecked(false);
     if (isOnlineChecked) {
       onlineRef.current.style.border = "1px solid blue";
       onlineRef.current.style.backgroundColor = "rgb(245 245 245)";
@@ -49,8 +41,6 @@ export default function AddOnsYearly() {
       setOnlineAmount(
         onlineRef.current.children[1].children[1].children[2].innerText
       );
-      console.log(onlineType);
-      console.log(onlineAmount);
     } else {
       onlineRef.current.style.border = "1px solid rgb(203 213 225)";
       onlineRef.current.style.backgroundColor = "white";
@@ -58,8 +48,6 @@ export default function AddOnsYearly() {
   }
 
   function handleLargerClick() {
-    // console.log(isChecked);
-    // setIsChecked(false);
     if (isLargerChecked) {
       largerRef.current.style.border = "1px solid blue";
       largerRef.current.style.backgroundColor = "rgb(245 245 245)";
@@ -69,8 +57,6 @@ export default function AddOnsYearly() {
       setLargerAmount(
         largerRef.current.children[1].children[1].children[2].innerText
       );
-      console.log(largerType);
-      console.log(largerAmount);
     } else {
       largerRef.current.style.border = "1px solid rgb(203 213 225)";
       largerRef.current.style.backgroundColor = "white";
@@ -78,8 +64,6 @@ export default function AddOnsYearly() {
   }
 
   function handleProfileClick() {
-    // console.log(isChecked);
-    // setIsChecked(false);
     if (isProfileChecked) {
       profileRef.current.style.border = "1px solid blue";
       profileRef.current.style.backgroundColor = "rgb(245 245 245)";
@@ -89,8 +73,6 @@ export default function AddOnsYearly() {
       setProfileAmount(
         profileRef.current.children[1].children[1].children[2].innerText
       );
-      console.log(profileType);
-      console.log(profileAmount);
     } else {
       profileRef.current.style.border = "1px solid rgb(203 213 225)";
       profileRef.current.style.backgroundColor = "white";
@@ -133,10 +115,6 @@ export default function AddOnsYearly() {
               <span>/yr</span>
             </span>
           </div>
-          {/* <div>
-            {!isOnlineChecked && onlineType ? onlineType : ""}
-            {!isOnlineChecked && onlineAmount ? onlineAmount : ""}
-          </div> */}
         </div>
 
         {/* //larger storage. */}
@@ -172,10 +150,6 @@ export default function AddOnsYearly() {
               <span>/yr</span>
             </span>
           </div>
-          {/* <div>
-            {!isLargerChecked && largerType ? onlineType : ""}
-            {!isLargerChecked && largerAmount ? onlineAmount : ""}
-          </div> */}
         </div>
 
         {/* //Customizable profile. */}
@@ -211,10 +185,6 @@ export default function AddOnsYearly() {
               <span>/yr</span>
             </span>
           </div>
-          {/* <div>
-            {!isProfileChecked && profileType ? onlineType : ""}
-            {!isProfileChecked && profileAmount ? onlineAmount : ""}
-          </div> */}
         </div>
       </div>
     </div>

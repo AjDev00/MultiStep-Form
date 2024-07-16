@@ -20,8 +20,6 @@ export default function PersonalInfo() {
     setError("");
   }
 
-  console.log(emailInput.name);
-
   return (
     <div className="">
       <div className="font-bold rounded-md border md:border-none md:rounded-none md:shadow-none md:bg-none border-white bg-white px-5 py-10 w-80 relative bottom-28 ml-5 min-[375px]:ml-9 min-[414px]:ml-8 min-[414px]:w-[350px] shadow-md md:text-nowrap md:absolute md:top-20">
@@ -53,19 +51,20 @@ export default function PersonalInfo() {
           {/* //email input. */}
           <span className="text-blue-950">Email Address</span>
           <input
-            type={emailInput.type}
+            type="email"
             placeholder="e.g. stephenking@gmail.com"
             className="border border-slate-300 p-2 rounded-md mb-5 focus:outline-blue-950 md:w-[510px]"
-            onChange={(e) => setEmailInput({ name: e.target.value })}
+            onChange={(e) =>
+              setEmailInput({ ...emailInput, name: e.target.value })
+            }
             value={emailInput.name}
             required
           />
-          {emailInput.name ? (
+          {emailInput.name && !error ? (
             ""
           ) : (
             <span className="-mt-4 mb-4 text-red-500">
-              {error ? error : ""}
-              {emailValidity ? "Invalid email address" : ""}
+              {error && error ? emailValidity && emailValidity : ""}
             </span>
           )}
 

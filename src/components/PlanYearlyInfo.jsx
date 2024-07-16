@@ -23,8 +23,6 @@ export default function PlanYearlyInfo() {
       arcadeRef.current.children[1].children[1].children[1].innerText
     );
     setPlanType(arcadeRef.current.children[1].firstChild.innerText);
-    console.log(planType);
-    console.log(planPayment);
   }
 
   function handleAdvancedClick() {
@@ -38,8 +36,6 @@ export default function PlanYearlyInfo() {
       advancedRef.current.children[1].children[1].children[1].innerText
     );
     setPlanType(advancedRef.current.children[1].firstChild.innerText);
-    console.log(planType);
-    console.log(planPayment);
   }
 
   function handleProClick() {
@@ -53,8 +49,6 @@ export default function PlanYearlyInfo() {
       proRef.current.children[1].children[1].children[1].innerText
     );
     setPlanType(proRef.current.children[1].firstChild.innerText);
-    console.log(planType);
-    console.log(planPayment);
   }
 
   return (
@@ -84,8 +78,6 @@ export default function PlanYearlyInfo() {
             <span className="font-semibold text-blue-950 md:text-nowrap">
               2 months free
             </span>
-            {/* {planType}
-            {planPayment} */}
           </div>
         </div>
 
